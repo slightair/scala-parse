@@ -1,8 +1,8 @@
-package cc.clv
+package cc.clv.parse
 
 import org.specs2.mutable._
 
-object ExampleAppSpec extends Specification {
+object ParseSpec extends Specification {
   "sample" should {
     "sample" in {
       "foo" must_== "foo"

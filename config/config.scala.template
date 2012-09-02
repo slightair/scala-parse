@@ -1,0 +1,6 @@
+import cc.clv.parse.config._
+
+new ParseConfig {
+  var appId = ""
+  var restAPIKey = ""
+}

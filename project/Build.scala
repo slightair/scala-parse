@@ -13,14 +13,11 @@ object ProjectBuild extends Build {
       scalacOptions ++= Seq("-deprecation"),
       scalaVersion := "2.9.1",
       libraryDependencies ++= Seq(
-        // test
         "org.specs2" %% "specs2" % "1.9" % "test",
-            
-        //log
-        "org.clapper" %% "grizzled-slf4j" % "0.6.8",
-        "ch.qos.logback" % "logback-classic" % "1.0.1"
+        "com.twitter" %% "util-eval" % "3.0.0"
       )
       // add other settings here
     )
-  )
+  ).dependsOn(takezoe_utils)
+  lazy val takezoe_utils = uri("hg:https://bitbucket.org/takezoe/scala-utils")
 }
